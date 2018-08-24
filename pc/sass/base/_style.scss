@@ -1,0 +1,28 @@
+@charset 'utf-8';
+$NnBa:'Nanum Barun Gothic', sans-serif;
+$NnSq:'Nanum Square', sans-serif;
+$Tm:'TmonMonsori', sans-serif;
+
+$base-color1:#000;
+/* font color */
+$fColor-1:#fff;
+$fColor-2:#000;
+/* s1 = small1 ~ */
+$fSize-s1:12px;
+$fSize-s2:14px;
+/* positioning */
+$re:relative;
+$ab:absolute;
+$fx:fixed;
+
+@mixin boxSizing() {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+}
+
+@for $v from 1 through 20 {
+	.visual_#{$v} { background:url('../image/contents_visual/visual_#{$v}.jpg') center center no-repeat; }
+}
