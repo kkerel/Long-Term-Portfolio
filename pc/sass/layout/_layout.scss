@@ -50,7 +50,7 @@ body.default { position:$re; overflow:hidden; }
 							}
 							&:before,&:after{content:''; position:$ab; top:0; left:0; height:4px; width:0; background: #000; transition:600ms ease all;}
 							&:after{left:inherit; top:inherit; right:0; bottom:0;}
-							.title{font-size:26px; float:left;
+							.title{font-size:26px;
 								&:hover{font-size:28px;}
 							}
 							.sub_text{top:65%;}
@@ -62,28 +62,29 @@ body.default { position:$re; overflow:hidden; }
 				}
 				.contents_info{width:96%; height:87%; margin:2%; opacity:0; position:$ab; top:0px; left:0px; z-index:10;
 					.inner_info{
-						.title{
-							a{float:left; margin-right:5px;}
-						}
-						.title_icon{float:left; z-index:10;animation-duration: 0.5s; animation-name: slidein; animation-iteration-count: infinite; animation-direction: alternate; overflow:hidden;
-							@keyframes slidein {
+						.title{float:right; animation-duration: 0.5s; animation-name: slideleft; animation-iteration-count: infinite; animation-direction: alternate;
+							@keyframes slideleft {
 								from {
-									padding-left:0px;
+									padding-right:0px;
 								}
 								to {
-									padding-left:5px;
+									padding-right:5px;
+								}
+							}
+						}
+						.title_icon{position:absolute; top:25%; left:50%; transform: translate(-50%,-50%); z-index:10; animation-duration: 0.5s; animation-name: slidebottom; animation-iteration-count: infinite; animation-direction: alternate; overflow:hidden;
+							@keyframes slidebottom {
+								from {
+									padding-bottom:0px;
+								}
+								to {
+									padding-bottom:10px;
 								}
 							}
 							.icon_inner{
-								span{display:inline-block; vertical-align:middle; font-size:10px; color:#000;}
+								span{font-size:10px; color:#000;}
 							}
 						}
-					}
-				}
-				.content_widget{clear:both;
-					dl{overflow:hidden;
-						dt{float:left;}
-						dd{float:left;}
 					}
 				}
 			}
@@ -131,4 +132,11 @@ body.default { position:$re; overflow:hidden; }
 			}
 		}
 	}
+}
+
+@media all and (max-width: 768px) {
+	.title{font-size:rem(20)!important;}
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
 }
