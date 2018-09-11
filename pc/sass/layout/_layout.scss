@@ -36,6 +36,7 @@ body.default { position:$re; overflow:hidden; }
 			.left_contents{width:50%; float:left;
 				.contents{width:100%;}
 			}
+			.right_contents{width:50%; float:left;}
 		}
 		/* 컨텐츠 스타일 */
 		.contents_wrap{letter-spacing: -5px;
